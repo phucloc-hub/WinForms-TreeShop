@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA404E45-D60A-4CAC-87D6-43005F010974}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TreeTop</RootNamespace>
+    <AssemblyName>TreeTop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business Logic\AccountBLL.cs" />
+    <Compile Include="Business Logic\CategoryBLL.cs" />
+    <Compile Include="Business Logic\OrderBLL.cs" />
+    <Compile Include="Business Logic\TransactionBLL.cs" />
+    <Compile Include="Business Logic\TreeBLL.cs" />
+    <Compile Include="Cart\Cart.cs" />
+    <Compile Include="DLL\AccountDAO.cs" />
+    <Compile Include="DLL\AccountDTO.cs" />
+    <Compile Include="DLL\CategoryDAO.cs" />
+    <Compile Include="DLL\DataProvider.cs" />
+    <Compile Include="DLL\OrderDAO.cs" />
+    <Compile Include="DLL\OrderDTO.cs" />
+    <Compile Include="DLL\TransactionDAO.cs" />
+    <Compile Include="DLL\TreeDAO.cs" />
+    <Compile Include="PLL\AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\AccountManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\AccountManager.Designer.cs">
+      <DependentUpon>AccountManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\AdminManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\AdminManager.Designer.cs">
+      <DependentUpon>AdminManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\BillManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\BillManager.Designer.cs">
+      <DependentUpon>BillManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\CategoryManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\CategoryManager.Designer.cs">
+      <DependentUpon>CategoryManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\Details.Designer.cs">
+      <DependentUpon>Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\DetailsAdminView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\DetailsAdminView.Designer.cs">
+      <DependentUpon>DetailsAdminView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\InformationUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\InformationUser.Designer.cs">
+      <DependentUpon>InformationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\MyCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\MyCart.Designer.cs">
+      <DependentUpon>MyCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\PasswordUpdating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\PasswordUpdating.Designer.cs">
+      <DependentUpon>PasswordUpdating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\Shopping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\Shopping.Designer.cs">
+      <DependentUpon>Shopping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\TreeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\TreeManager.Designer.cs">
+      <DependentUpon>TreeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PLL\RegistationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\RegistationForm.Designer.cs">
+      <DependentUpon>RegistationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\TreeShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\TreeShop.Designer.cs">
+      <DependentUpon>TreeShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\DbUtils.cs" />
+    <EmbeddedResource Include="PLL\AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\AccountManager.resx">
+      <DependentUpon>AccountManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\AdminManager.resx">
+      <DependentUpon>AdminManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\BillManager.resx">
+      <DependentUpon>BillManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\CategoryManager.resx">
+      <DependentUpon>CategoryManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\Details.resx">
+      <DependentUpon>Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\DetailsAdminView.resx">
+      <DependentUpon>DetailsAdminView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\InformationUser.resx">
+      <DependentUpon>InformationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\MyCart.resx">
+      <DependentUpon>MyCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\PasswordUpdating.resx">
+      <DependentUpon>PasswordUpdating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\Shopping.resx">
+      <DependentUpon>Shopping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\TreeManager.resx">
+      <DependentUpon>TreeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PLL\RegistationForm.resx">
+      <DependentUpon>RegistationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\TreeShop.resx">
+      <DependentUpon>TreeShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
